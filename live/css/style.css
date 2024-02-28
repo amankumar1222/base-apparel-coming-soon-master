@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* For different weights */
+.josefin-sans-light {
+    font-weight: 300;
+}
+
+.josefin-sans-regular {
+    font-weight: 400;
+}
+
+.josefin-sans-semibold {
+    font-weight: 600;
+}
+
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+/* Primary Colors */
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+}
+
+/* Neutral Colors */
+:root {
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+/* Gradients */
+:root {
+    --gradient-white-to-light: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --gradient-light-to-dark: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+/* layout style css start here  */
+
+.container {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    background: var(--gradient-white-to-light);
+}
+
+
+
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 100px;
+    flex-direction: column;
+    background: url('/images/bg-pattern-desktop.svg') no-repeat center center/cover;
+    width: 65%;
+}
+
+.top-header {
+    height: 15%;
+    width: 100%;
+
+}
+
+.top-header img {
+    padding: 0px 50px;
+
+}
+
+
+.bottom-content {
+    height: 80%;
+    margin-right: 50px;
+}
+
+.heading {
+    width: 100%;
+    padding: 20px 50px;
+}
+
+
+.heading h1 {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 20px;
+    line-height: 1.1;
+}
+
+.heading span {
+    color: var(--desaturated-red);
+    font-weight: 200;
+}
+
+.para {
+    width: 80%;
+    padding: 0px 50px;
+    margin-bottom: 40px;
+}
+
+.para p {
+    word-spacing: 2px;
+    line-height: 1.7;
+    color: var(--desaturated-red);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 0px 50px;
+    position: relative;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    width: 70%;
+    padding: 18px 20px;
+    border-radius: 25px;
+    border: 1.5px solid var(--desaturated-red);
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: var(--desaturated-red);
+}
+
+.error {
+    font-size: 13px;
+    margin-left: 17px;
+    margin-top: 8px;
+    color: var(--soft-red);
+    display: none;
+}
+
+
+
+.btn {
+    padding: 16.5px 45px;
+    border-radius: 50px;
+    position: absolute;
+    top: -1px;
+    right: 25%;
+    border: none;
+    background: var(--gradient-light-to-dark);
+    cursor: pointer;
+}
+
+
+.form-group img {
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    display: none;
+}
+
+.right {
+    background: url("/images/hero-desktop.jpg") no-repeat center center/cover;
+    width: 50%;
+    height: 100%;
+
+
+
+}
+
+
+
+
+@media only screen and (max-width:1000px) {
+    .container {
+        height: 800px;
+        flex-direction: column-reverse;
+    }
+
+    .right {
+        background: url(/images/hero-mobile.jpg) no-repeat;
+        width: 100%;
+        height: 40%;
+        background-size: cover;
+        margin-top: 60px;
+    }
+
+    .left {
+        padding: 0px;
+        background: url('/images/bg-pattern-desktop.svg') no-repeat center center/cover;
+    }
+
+    .left {
+        height: 60%;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form-group {
+        align-items: center;
+        text-align: center;
+    }
+
+    .form-group input {
+        width: 80%;
+    }
+
+    .heading,
+    .para {
+        text-align: center;
+        width: 100%;
+    }
+
+    .top-header {
+        position: absolute;
+        background: var(--gradient-white-to-light);
+        top: 0px;
+        height: 80px;
+        right: 0px;
+    }
+
+    .top-header img {
+        padding: 24px 50px;
+        height: 75px;
+    }
+
+    .submitBtn {
+        width: 100%;
+
+    }
+
+    .heading h1 {
+        font-size: 50px;
+        line-height: 1;
+
+    }
+
+    .btn {
+        padding: 16.5px 30px;
+        border-radius: 25px;
+        right: 10.5%;
+    }
+
+    .error {
+        margin-left: -50px;
+    }
+
+    .bottom-content {
+        margin-right: 0px;
+    }
+
+    .form-group img {
+        position: absolute;
+        left: 65%;
+        top: 15px;
+    }
+
+}
